@@ -25,7 +25,7 @@ class StudentGradingTestsPartC {
 	 * @see RaceTrack RaceTrack(RaceCar[])
 	 * @see SimulationDriverC getSomeRaceCars()
 	 */
-	private static GenericConsoleTester tester = new GenericConsoleTester();
+	private static final GenericConsoleTester tester = new GenericConsoleTester();
 	
 	/**
 	 * The RaceTrack that will be used in these tests 
@@ -82,7 +82,7 @@ class StudentGradingTestsPartC {
 			return;
 		}
 		// convert expected from var String into set so order-independent check can be made 
-		Set<String> expSet = new HashSet<String>();
+		Set<String> expSet = new HashSet<>();
 		for (String event : exp) {
 			expSet.add(event);
 		}

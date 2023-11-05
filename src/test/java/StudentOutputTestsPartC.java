@@ -1,9 +1,15 @@
 
 
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
+import static org.junit.jupiter.api.Assertions.*;
 
 
 /**
@@ -18,10 +24,10 @@ class StudentOutputTestsPartC {
 	
 	/**
 	 * Testing utility that will be used to pass RaceCar initialization data into the RaceTrack using SimulationDriver.getSomeRaceCars() 
-	 * @see RaceTrack#RaceTrack(RaceCar[])
-	 * @see SimulationDriver#getSomeRaceCars()
+	 * @see RaceTrack RaceTrack(RaceCar[])
+	 * @see SimulationDriverC getSomeRaceCars()
 	 */
-	private static GenericConsoleTester tester = new GenericConsoleTester();
+	private static final GenericConsoleTester tester = new GenericConsoleTester();
 	
 	/**
 	 * The RaceTrack that will be used in these tests 
@@ -78,10 +84,8 @@ class StudentOutputTestsPartC {
 			return;
 		}
 		// convert expected from var String into set so order-independent check can be made 
-		Set<String> expSet = new HashSet<String>();
-		for (String event : exp) {
-			expSet.add(event);
-		}
+		Set<String> expSet = new HashSet<>();
+        Collections.addAll(expSet, exp);
 		int expSize = expSet.size();
 		// expected & actual should have the same number of entries  
 		assertEquals(expSize, actEntry.size(), String.format("Number of events at tick %d [%d] did not match expected value of [%d].", tick, actEntry.size(), expSize));
@@ -121,30 +125,30 @@ class StudentOutputTestsPartC {
 	@Test
 	void testOnSampleOutput() {
 		// pass race car, sports car, and formula one in through scanner and run the track
-		tester.setUpInputStream("3", "30 3 " + TYPE_RACE_CAR, "60 6 " + TYPE_FORMULA_ONE, "27 1 " + TYPE_SPORTS_CAR);
+		tester.setUpInputStream("3", "30 3 " + SimulationDriverC.TYPE_RACE_CAR, "60 6 " + SimulationDriverC.TYPE_FORMULA_ONE, "27 1 " + SimulationDriverC.TYPE_SPORTS_CAR);
 		track = new RaceTrack();
 		track.setCars(SimulationDriverC.getSomeCars());
 		track.run();
 		logger = track.getLogger(); // get logged results and test each tick based on expected output 
 		testEmptyTickRange(1, 9);
-		testTick(10, damagedStr(FORMULAONE), damagedStr(RACECAR));
+		testTick(10, TrackLoggerC.damagedStr(FORMULAONE), TrackLoggerC.damagedStr(RACECAR));
 		testTick(11, "");
 		testTick(12, "");
-		testTick(13, enterPitStr(FORMULAONE));
+		testTick(13, TrackLoggerC.enterPitStr(FORMULAONE));
 		testTick(14, "");
-		testTick(15, exitPitStr(FORMULAONE), enterPitStr(RACECAR));
+		testTick(15, TrackLoggerC.exitPitStr(FORMULAONE), TrackLoggerC.enterPitStr(RACECAR));
 		testTick(16, "");
-		testTick(17, exitPitStr(RACECAR));
+		testTick(17, TrackLoggerC.exitPitStr(RACECAR));
 		testTick(18, "");
 		testTick(19, "");
-		testTick(20, finishedStr(FORMULAONE, 1));
+		testTick(20, TrackLoggerC.finishedStr(FORMULAONE, 1));
 		testEmptyTickRange(21, 34);
-		testTick(35, damagedStr(RACECAR), damagedStr(SPORTSCAR));
+		testTick(35, TrackLoggerC.damagedStr(RACECAR), TrackLoggerC.damagedStr(SPORTSCAR));
 		testTick(36, "");
-		testTick(37, enterPitStr(RACECAR), enterPitStr(SPORTSCAR));
+		testTick(37, TrackLoggerC.enterPitStr(RACECAR), TrackLoggerC.enterPitStr(SPORTSCAR));
 		testTick(38, "");
-		testTick(39, exitPitStr(RACECAR), exitPitStr(SPORTSCAR), finishedStr(RACECAR, 2), finishedStr(SPORTSCAR, 3), scoreStr(670));
+		testTick(39, TrackLoggerC.exitPitStr(RACECAR), TrackLoggerC.exitPitStr(SPORTSCAR), TrackLoggerC.finishedStr(RACECAR, 2), TrackLoggerC.finishedStr(SPORTSCAR, 3), TrackLoggerC.scoreStr(670));
 	}
-	
-	
+
+
 }

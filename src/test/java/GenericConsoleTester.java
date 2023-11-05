@@ -77,7 +77,7 @@ public class GenericConsoleTester {
 	 */
 	public GenericConsoleTester(boolean keepOutFiles) {
 		this();
-		outFilePaths = new LinkedList<String>();
+		outFilePaths = new LinkedList<>();
 		this.keepOutFiles = keepOutFiles;
 	}
 
@@ -186,7 +186,7 @@ public class GenericConsoleTester {
 			System.err.println(e.getMessage());
 		}
 		// get the generated output from the byte stream, loop over its lines with scanner, and load it into a stringjoiner
-		try {     
+		try {
 			String out = byteOut.toString(StandardCharsets.UTF_8.name()).trim();
 			Scanner outRdr = new Scanner(out);
 			StringJoiner joiner = new StringJoiner("\n");
@@ -197,7 +197,7 @@ public class GenericConsoleTester {
 			return joiner.toString();
 		} catch (UnsupportedEncodingException e) { // if UTF-8 not supported
 			System.err.println(e.getMessage());
-			return null; // returning NULL, exception occurred 
+			return null; // returning NULL, exception occurred
 		}
 	}
 	

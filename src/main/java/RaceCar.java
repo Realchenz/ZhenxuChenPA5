@@ -1,7 +1,13 @@
 public class RaceCar extends Car {
 
     public RaceCar(int speed, int strength) {
-        super(speed, strength);
+        if (speed < 30)
+            this.speed = 30;
+        else this.speed = Math.min(speed, 55);
+        if (strength < 2)
+            this.strength = 2;
+        else this.strength = Math.min(strength, 4);
+        this.location = 0.0;
     }
 
     public RaceCar() {
@@ -9,12 +15,8 @@ public class RaceCar extends Car {
     }
 
     @Override
-    public double getLocation() {
-        return 0.0;
+    public String toString() {
+        return "RaceCar" + super.toString();
     }
 
-    @Override
-    public String toString() {
-        return "RaceCar: " + super.toString();
-    }
 }
