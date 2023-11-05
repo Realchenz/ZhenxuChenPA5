@@ -1,5 +1,15 @@
+/**
+ * SportsCar class, extends Car
+ *
+ * @see Car
+ */
 public class SportsCar extends Car {
-
+    /**
+     * Constructor for SportsCar
+     *
+     * @param speed    speed must be between 20 and 45
+     * @param strength strength must be between 1 and 3
+     */
     public SportsCar(int speed, int strength) {
         if (speed >= 20 && speed <= 45)
             this.speed = speed;

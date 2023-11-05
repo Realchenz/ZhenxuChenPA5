@@ -1,4 +1,15 @@
+/**
+ * FormulaOne class, extends Car
+ *
+ * @see Car
+ */
 public class FormulaOne extends Car {
+    /**
+     * Constructor for FormulaOne
+     *
+     * @param speed    speed must be between 30 and 70
+     * @param strength strength must be between 3 and 5
+     */
     public FormulaOne(int speed, int strength) {
         if (speed < 30)
             this.speed = 30;
