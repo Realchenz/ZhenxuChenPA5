@@ -19,13 +19,6 @@ public class RaceTrack {
         this.cars = cars;
     }
 
-    /**
-     * This method runs one tick. A tick moves every car a set distance
-     * equal to its speed. If a car is damaged and passes the 75 unit mark during this tick, it enters the
-     * pitstop. Upon exiting the pitstop, it starts at the 75 unit mark and immediately moves according to
-     * its speed. After all the cars have moved their set distance, the Tick method should check for
-     * collisions and deal with them appropriately.
-     */
     public void tick() {
         logger.logNewTick();
         for (Car car : cars) {
@@ -34,20 +27,22 @@ public class RaceTrack {
                 if (car.pitStopPause == 0) {
                     pitStop.exitPitStop(car);
                     logger.logExitPit(car);
+                    car.move();
                 }
             } else if (!car.isFinished) car.move();
         }
         for (Car car : cars) {
-            if(car.isFinished) continue;
+            if (car.isFinished) continue;
             finishLine.enterFinishLine(car);
-            if(car.isFinished) logger.logFinish(car, finishLine.getPlace());
+            if (car.isFinished) logger.logFinish(car, finishLine.getPlace());
         }
         for (Car car : cars) {
-            if (car.isDamagedCrossPitStop) {
+            if (car.isFinished) continue;
+            pitStop.enterPitStop(car);
+            if(car.pitStopPause == 2) {
                 logger.logEnterPit(car);
-                pitStop.enterPitStop(car);
-                car.isDamagedCrossPitStop = false;
             }
+            car.isDamagedCrossPitStop = false;
         }
         checkCollision();
     }
@@ -55,7 +50,9 @@ public class RaceTrack {
     public void checkCollision() {
         int length = cars.length;
         for (int i = 0; i < length; i++) {
+            if (cars[i].isFinished) continue;
             for (int j = i + 1; j < length; j++) {
+                if (cars[j].isFinished) continue;
                 if (cars[i].getLocation() == cars[j].getLocation() && cars[i].getLocation() != 75) {
                     logger.logDamaged(cars[i]);
                     cars[i].collide();
@@ -80,7 +77,7 @@ public class RaceTrack {
     }
 
     public int calculateScore(int ticks) {
-        int score = 0;
+        int score = 1000;
         for (Car car : cars) {
             if (car instanceof SportsCar) {
                 score += 200;

@@ -30,6 +30,7 @@ abstract public class Car {
         location = location + speed;
         if (location >= 75 && isDamaged) {
             isDamagedCrossPitStop = true;
+            setLocation(75);
         }
         if (location >= 100) {
             location = location - 100;
@@ -40,5 +41,9 @@ abstract public class Car {
     public void collide() {
         isDamaged = true;
         speed -= strength * 5;
+    }
+
+    public void setLocation(double i) {
+        location = i;
     }
 }

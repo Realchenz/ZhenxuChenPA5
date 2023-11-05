@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29395405-fd53-40be-9052-291d5d805bca" name="更改" comment="formatting">
+    <list default="true" id="29395405-fd53-40be-9052-291d5d805bca" name="更改" comment="regular commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FinishLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinishLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FormulaOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FormulaOne.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PitStop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PitStop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RaceCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RaceCar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RaceTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RaceTrack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SimulationDriverC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SimulationDriverC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SportsCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SportsCar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GenericConsoleTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GenericConsoleTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StudentGradingTestsPartC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StudentGradingTestsPartC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StudentOutputTestsPartC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StudentOutputTestsPartC.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +113,7 @@
       <workItem from="1699155898010" duration="1152000" />
       <workItem from="1699157240253" duration="24000" />
       <workItem from="1699157552046" duration="1657000" />
-      <workItem from="1699159269076" duration="16104000" />
+      <workItem from="1699159269076" duration="22356000" />
     </task>
     <task id="LOCAL-00001" summary="formatting">
       <option name="closed" value="true" />
@@ -130,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699193283010</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="regular commit">
+      <option name="closed" value="true" />
+      <created>1699212409457</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699212409457</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,19 +150,29 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="formatting" />
+    <MESSAGE value="regular commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="regular commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/RaceTrack.java</url>
-          <line>28</line>
+          <line>21</line>
           <properties class="RaceTrack" method="tick">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/StudentOutputTestsPartC.java</url>
+          <line>79</line>
+          <properties class="StudentOutputTestsPartC" method="testTick">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
