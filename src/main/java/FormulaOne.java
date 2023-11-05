@@ -7,6 +7,7 @@ public class FormulaOne extends Car {
             this.strength = 3;
         else this.strength = Math.min(strength, 5);
         this.location = 0.0;
+        this.realSpeed = this.speed;
     }
 
     public FormulaOne() {

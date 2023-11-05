@@ -10,6 +10,7 @@ public class SportsCar extends Car {
         else
             throw new IllegalArgumentException("strength must be between 0 and 10");
         this.location = 0.0;
+        this.realSpeed = this.speed;
     }
 
     public SportsCar() {

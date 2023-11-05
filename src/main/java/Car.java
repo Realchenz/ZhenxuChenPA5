@@ -1,5 +1,6 @@
 abstract public class Car {
     protected int speed;
+    protected int realSpeed;
     protected int strength;
     protected double location;
     protected int laps = 0;
@@ -27,7 +28,7 @@ abstract public class Car {
     }
 
     public void move() {
-        location = location + speed;
+        location = location + realSpeed;
         if (location >= 75 && isDamaged) {
             isDamagedCrossPitStop = true;
             setLocation(75);
@@ -40,7 +41,7 @@ abstract public class Car {
 
     public void collide() {
         isDamaged = true;
-        speed -= strength * 5;
+        realSpeed -= strength * 5;
     }
 
     public void setLocation(double i) {

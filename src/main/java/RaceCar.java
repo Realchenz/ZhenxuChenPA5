@@ -8,6 +8,7 @@ public class RaceCar extends Car {
             this.strength = 2;
         else this.strength = Math.min(strength, 4);
         this.location = 0.0;
+        this.realSpeed = this.speed;
     }
 
     public RaceCar() {

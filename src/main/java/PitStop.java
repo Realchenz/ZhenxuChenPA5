@@ -8,7 +8,7 @@ public class PitStop {
 
     public void exitPitStop(Car car) {
         car.isDamaged = false;
-        car.speed += car.strength * 5;
+        car.realSpeed += car.strength * 5;
     }
 
 }
