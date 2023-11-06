@@ -4,19 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29395405-fd53-40be-9052-291d5d805bca" name="更改" comment="modify package name">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/SimulationDriverC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/SimulationDriverC.java" afterDir="false" />
-    </list>
+    <list default="true" id="29395405-fd53-40be-9052-291d5d805bca" name="更改" comment="change standard output to logging" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
@@ -108,12 +109,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentGradingTestsPartC.testOnSampleOutput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StudentOutputTestsPartC (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ZhenxuChenPA5" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="StudentGradingTestsPartC" />
-      <option name="METHOD_NAME" value="testOnSampleOutput" />
-      <option name="TEST_OBJECT" value="method" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.StudentOutputTestsPartC" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -131,10 +137,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.StudentGradingTestsPartC (1)" />
+        <item itemvalue="JUnit.StudentOutputTestsPartC (1)" />
         <item itemvalue="JUnit.StudentOutputTestsPartC" />
         <item itemvalue="应用程序.SimulationDriverC" />
         <item itemvalue="JUnit.StudentGradingTestsPartC" />
-        <item itemvalue="JUnit.StudentGradingTestsPartC.testOnSampleOutput" />
       </list>
     </recent_temporary>
   </component>
@@ -151,7 +157,7 @@
       <workItem from="1699157552046" duration="1657000" />
       <workItem from="1699159269076" duration="24948000" />
       <workItem from="1699220770307" duration="2473000" />
-      <workItem from="1699223550335" duration="3471000" />
+      <workItem from="1699223550335" duration="3911000" />
     </task>
     <task id="LOCAL-00001" summary="formatting">
       <option name="closed" value="true" />
@@ -201,7 +207,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699282294339</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="change standard output to logging">
+      <option name="closed" value="true" />
+      <created>1699284140490</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699284140490</updated>
+    </task>
+    <task id="LOCAL-00008" summary="change standard output to logging">
+      <option name="closed" value="true" />
+      <created>1699284364904</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699284364904</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +247,8 @@
     <MESSAGE value="Pass StudentOutputTestPart" />
     <MESSAGE value="Pass StudentGradingTestPart" />
     <MESSAGE value="modify package name" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify package name" />
+    <MESSAGE value="change standard output to logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="change standard output to logging" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

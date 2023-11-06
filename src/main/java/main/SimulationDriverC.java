@@ -81,7 +81,7 @@ public class SimulationDriverC {
                             cars[i] = new RaceCar();
                             waitingForValidIn = false;
                         } else {
-                            System.out.print("Invalid car type: " + carType);
+                            log.info("Invalid car type: " + carType);
                         }
                     } else if (speed > DEFAULT_STAT_VAL && strength > DEFAULT_STAT_VAL) {
                         if (carType.equals(TYPE_SPORTS_CAR)) {
@@ -94,20 +94,19 @@ public class SimulationDriverC {
                             cars[i] = new RaceCar(speed, strength);
                             waitingForValidIn = false;
                         } else {
-                            System.out.print("Invalid car type: " + carType);
+                            log.info("Invalid car type: " + carType);
                         }
                     } else {
-                        System.out.println("Speed and strength stats must either both be " + DEFAULT_STAT_VAL + " or both positive values.");
+                        log.info("Speed and strength stats must either both be " + DEFAULT_STAT_VAL + " or both positive values.");
                     }
                 } catch (InputMismatchException e) {
-                    System.out.print("Non-integer values are not allowed.");
+                    log.info("Non-integer values are not allowed.");
                     consoleRdr.nextLine();
                 }
             } while (waitingForValidIn);
             waitingForValidIn = true;
         }
         consoleRdr.close();
-        System.out.println();
         return cars;
     }
 
