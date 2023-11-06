@@ -1,3 +1,4 @@
+package main;
 /**
  * This class represents a finish line.
  * <p>Any cars cross the finish line will not continue moving</p>

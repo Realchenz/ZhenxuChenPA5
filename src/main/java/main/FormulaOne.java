@@ -1,3 +1,4 @@
+package main;
 /**
  * FormulaOne class, extends Car
  *

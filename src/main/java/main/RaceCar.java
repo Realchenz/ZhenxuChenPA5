@@ -1,3 +1,4 @@
+package main;
 /**
  * RaceCar class, extends Car
  *

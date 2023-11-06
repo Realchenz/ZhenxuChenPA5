@@ -1,3 +1,4 @@
+package main;
 /**
  * This class represents a racetrack that hold cars and racetrack components. The racetrack class will also run
  * the race itself as a simulation game.
@@ -6,6 +7,7 @@
  * @address zhenxuchen@brandeis.edu
  * @date Nov, 2023
  * @assignment PA5
+ * @version 1.0
  */
 public class RaceTrack {
     private Car[] cars;
