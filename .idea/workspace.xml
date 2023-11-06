@@ -4,21 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29395405-fd53-40be-9052-291d5d805bca" name="更改" comment="Pass StudentGradingTestPart">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="29395405-fd53-40be-9052-291d5d805bca" name="更改" comment="modify package name">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FinishLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/FinishLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FormulaOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/FormulaOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PitStop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/PitStop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RaceCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/RaceCar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RaceTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/RaceTrack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SimulationDriverC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/SimulationDriverC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SportsCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/SportsCar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TrackLoggerC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/TrackLoggerC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GenericConsoleTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/GenericConsoleTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StudentGradingTestsPartC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/StudentGradingTestsPartC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/StudentOutputTestsPartC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/StudentOutputTestsPartC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/SimulationDriverC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/SimulationDriverC.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +56,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "last_directory_selection": "/Users/chenzhenxu/IdeaProjects/ZhenxuChenPA5/src/test/java",
+    "last_opened_file_path": "/Users/chenzhenxu/IdeaProjects/ZhenxuChenPA5/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -76,15 +68,33 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/java" />
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.StudentGradingTestsPartC (1)">
     <configuration name="SimulationDriverC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SimulationDriverC" />
       <module name="ZhenxuChenPA5" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentGradingTestsPartC (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ZhenxuChenPA5" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.StudentGradingTestsPartC" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,23 +128,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentOutputTestsPartC.testOnSampleOutput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ZhenxuChenPA5" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="StudentOutputTestsPartC" />
-      <option name="METHOD_NAME" value="testOnSampleOutput" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.SimulationDriverC" />
+        <item itemvalue="JUnit.StudentGradingTestsPartC (1)" />
         <item itemvalue="JUnit.StudentOutputTestsPartC" />
+        <item itemvalue="应用程序.SimulationDriverC" />
         <item itemvalue="JUnit.StudentGradingTestsPartC" />
         <item itemvalue="JUnit.StudentGradingTestsPartC.testOnSampleOutput" />
-        <item itemvalue="JUnit.StudentOutputTestsPartC.testOnSampleOutput" />
       </list>
     </recent_temporary>
   </component>
@@ -151,7 +151,7 @@
       <workItem from="1699157552046" duration="1657000" />
       <workItem from="1699159269076" duration="24948000" />
       <workItem from="1699220770307" duration="2473000" />
-      <workItem from="1699223550335" duration="1705000" />
+      <workItem from="1699223550335" duration="3471000" />
     </task>
     <task id="LOCAL-00001" summary="formatting">
       <option name="closed" value="true" />
@@ -193,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699223600888</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="modify package name">
+      <option name="closed" value="true" />
+      <created>1699282294339</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699282294339</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +224,8 @@
     <MESSAGE value="regular commit(to resolve the speed, realSpeed problems)" />
     <MESSAGE value="Pass StudentOutputTestPart" />
     <MESSAGE value="Pass StudentGradingTestPart" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pass StudentGradingTestPart" />
+    <MESSAGE value="modify package name" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify package name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

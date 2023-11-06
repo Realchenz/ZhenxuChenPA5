@@ -49,7 +49,7 @@ abstract public class Car {
     /**
      * No-arg constructor:
      */
-    public Car() {
+    protected Car() {
         this(0, 0);
     }
     @Override
