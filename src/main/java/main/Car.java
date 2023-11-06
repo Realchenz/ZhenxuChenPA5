@@ -8,7 +8,7 @@ package main;
  * @assignment PA5
  * @version 1.0
  */
-abstract public class Car {
+public abstract class Car {
     /**
      * the nominal speed of the car
      */
@@ -49,7 +49,7 @@ abstract public class Car {
     /**
      * No-arg constructor:
      */
-    public Car() {
+    protected Car() {
         this(0, 0);
     }
     @Override

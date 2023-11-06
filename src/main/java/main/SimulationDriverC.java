@@ -1,23 +1,26 @@
 package main;
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+@Slf4j
 public class SimulationDriverC {
 
     /**
      * Holds the String that a user should enter to specify a RaceCar type car.
      */
-    public static String TYPE_RACE_CAR = "R";
+    public static final String TYPE_RACE_CAR = "R";
 
     /**
      * Holds the String that a user should enter to specify a FormulaOne type car.
      */
-    public static String TYPE_FORMULA_ONE = "F";
+    public static final String TYPE_FORMULA_ONE = "F";
 
     /**
      * Holds the String that a user should enter to specify a SportsCar type car.
      */
-    public static String TYPE_SPORTS_CAR = "S";
+    public static final String TYPE_SPORTS_CAR = "S";
 
     /**
      * Value to signify a default stat value.
@@ -27,7 +30,7 @@ public class SimulationDriverC {
     public static void main(String[] args) {
         RaceTrack track = new RaceTrack();
         track.setCars(getSomeCars());
-        System.out.println("The race has started!");
+        log.info("The race has started!");
         track.run();
     }
 
@@ -38,22 +41,22 @@ public class SimulationDriverC {
      * @return an array of Cars constructed by the user
      */
     public static Car[] getSomeCars() {
-        System.out.print("Welcome to the Need for Speed Simulator!\n\nFor each Car: enter the speed, strength, and car type separated by a space.\nTo create a RaceCar use " + TYPE_RACE_CAR + ", to create a FormulaOne use " + TYPE_FORMULA_ONE + " or to create a SportsCar use " + TYPE_SPORTS_CAR + ".\nIf you want to construct a default Car of some type, enter " + DEFAULT_STAT_VAL + " for the speed and strength.\n");
+        log.info("Welcome to the Need for Speed Simulator!\n\nFor each Car: enter the speed, strength, and car type separated by a space.\nTo create a RaceCar use " + TYPE_RACE_CAR + ", to create a FormulaOne use " + TYPE_FORMULA_ONE + " or to create a SportsCar use " + TYPE_SPORTS_CAR + ".\nIf you want to construct a default Car of some type, enter " + DEFAULT_STAT_VAL + " for the speed and strength.\n");
         Scanner consoleRdr = new Scanner(System.in);
         boolean waitingForValidIn = true;
         int numCars = 0;
         do {
-            System.out.print("How many Cars would you like to enter in the race? ");
+            log.info("How many Cars would you like to enter in the race? ");
             try {
                 numCars = consoleRdr.nextInt();
             } catch (InputMismatchException e) {
-                System.out.print("Non-integer values are not allowed.");
+                log.info("Non-integer values are not allowed.");
                 consoleRdr.nextLine();
             }
             if (numCars >= 0) {
                 waitingForValidIn = false;
             } else {
-                System.out.println("Number of cars being created must be a nonnegative number.");
+                log.info("Number of cars being created must be a nonnegative number.");
             }
         } while (waitingForValidIn);
         waitingForValidIn = true;
@@ -62,7 +65,7 @@ public class SimulationDriverC {
         // all inputs will have only 3 characters, no more no less!
         for (int i = 0; i < numCars; i++) {
             do {
-                System.out.print("Car #" + (i + 1) + ": ");
+                log.info("Car #" + (i + 1) + ": ");
                 try {
                     int speed = consoleRdr.nextInt();
                     int strength = consoleRdr.nextInt();
