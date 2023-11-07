@@ -1,4 +1,7 @@
 package main;
+
+import lombok.Getter;
+
 /**
  * This class represents a super class for all car classes.
  *
@@ -21,6 +24,7 @@ public abstract class Car {
      * the strength of the car
      */
     protected int strength;
+    @Getter
     protected double location;
     protected int laps = 0;
     /**
@@ -87,7 +91,4 @@ public abstract class Car {
         location = i;
     }
 
-    public double getLocation() {
-        return location;
-    }
 }

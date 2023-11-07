@@ -1,4 +1,7 @@
 package main;
+
+import lombok.Getter;
+
 /**
  * This class represents a finish line.
  * <p>Any cars cross the finish line will not continue moving</p>
@@ -8,6 +11,7 @@ package main;
  * @date Nov, 2023
  * @assignment PA5
  */
+@Getter
 public class FinishLine {
     /**
      * the rank of the car
@@ -40,8 +44,5 @@ public class FinishLine {
         return finished();
     }
 
-    public int getPlace() {
-        return place;
-    }
 }
 

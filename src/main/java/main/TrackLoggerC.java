@@ -24,7 +24,7 @@ public class TrackLoggerC {
 	/**
 	 * List of Sets of events that occur at each tick.
 	 */
-	private List<Set<String>> tickOutputs;
+	private final List<Set<String>> tickOutputs;
 
 	/**
 	 * Constructs a logger for the beginning of the race. 

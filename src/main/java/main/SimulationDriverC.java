@@ -71,30 +71,36 @@ public class SimulationDriverC {
                     int strength = consoleRdr.nextInt();
                     String carType = consoleRdr.next();
                     if (speed == DEFAULT_STAT_VAL && strength == DEFAULT_STAT_VAL) {
-                        if (carType.equals(TYPE_SPORTS_CAR)) {
-                            cars[i] = new SportsCar();
-                            waitingForValidIn = false;
-                        } else if (carType.equals(TYPE_FORMULA_ONE)) {
-                            cars[i] = new FormulaOne();
-                            waitingForValidIn = false;
-                        } else if (carType.equals(TYPE_RACE_CAR)) {
-                            cars[i] = new RaceCar();
-                            waitingForValidIn = false;
-                        } else {
-                            log.info("Invalid car type: " + carType);
+                        switch (carType) {
+                            case TYPE_SPORTS_CAR -> {
+                                cars[i] = new SportsCar();
+                                waitingForValidIn = false;
+                            }
+                            case TYPE_FORMULA_ONE -> {
+                                cars[i] = new FormulaOne();
+                                waitingForValidIn = false;
+                            }
+                            case TYPE_RACE_CAR -> {
+                                cars[i] = new RaceCar();
+                                waitingForValidIn = false;
+                            }
+                            default -> log.info("Invalid car type: " + carType);
                         }
                     } else if (speed > DEFAULT_STAT_VAL && strength > DEFAULT_STAT_VAL) {
-                        if (carType.equals(TYPE_SPORTS_CAR)) {
-                            cars[i] = new SportsCar(speed, strength);
-                            waitingForValidIn = false;
-                        } else if (carType.equals(TYPE_FORMULA_ONE)) {
-                            cars[i] = new FormulaOne(speed, strength);
-                            waitingForValidIn = false;
-                        } else if (carType.equals(TYPE_RACE_CAR)) {
-                            cars[i] = new RaceCar(speed, strength);
-                            waitingForValidIn = false;
-                        } else {
-                            log.info("Invalid car type: " + carType);
+                        switch (carType) {
+                            case TYPE_SPORTS_CAR -> {
+                                cars[i] = new SportsCar(speed, strength);
+                                waitingForValidIn = false;
+                            }
+                            case TYPE_FORMULA_ONE -> {
+                                cars[i] = new FormulaOne(speed, strength);
+                                waitingForValidIn = false;
+                            }
+                            case TYPE_RACE_CAR -> {
+                                cars[i] = new RaceCar(speed, strength);
+                                waitingForValidIn = false;
+                            }
+                            default -> log.info("Invalid car type: " + carType);
                         }
                     } else {
                         log.info("Speed and strength stats must either both be " + DEFAULT_STAT_VAL + " or both positive values.");

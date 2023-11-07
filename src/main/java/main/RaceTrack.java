@@ -1,4 +1,7 @@
 package main;
+
+import lombok.Getter;
+
 /**
  * This class represents a racetrack that hold cars and racetrack components. The racetrack class will also run
  * the race itself as a simulation game.
@@ -16,7 +19,13 @@ public class RaceTrack {
 
     /**
      * DO NOT REMOVE THIS - you should be using this to log this track's events. For more see the assignment PDF / documentation for TrackLoggerB.java
+     * -- GETTER --
+     *  This method returns the logger instance used by this RaceTrack. You <b>SHOULD NOT</b> be using this method.
+     *
+     * @return logger with this track's events
+
      */
+    @Getter
     private final TrackLoggerC logger;
 
     public RaceTrack() {
@@ -123,15 +132,6 @@ public class RaceTrack {
         }
         score -= ticks * 20;
         return score;
-    }
-
-    /**
-     * This method returns the logger instance used by this RaceTrack. You <b>SHOULD NOT</b> be using this method.
-     *
-     * @return logger with this track's events
-     */
-    public TrackLoggerC getLogger() {
-        return logger;
     }
 
 }
